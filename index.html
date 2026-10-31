@@ -4,135 +4,162 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ritik Dubey – Backend + AI Engineer</title>
-<meta name="description" content="Ritik Dubey, backend and generative AI engineer at Dell Technologies, Bengaluru. Scroll to drive through his resume.">
+<meta name="description" content="Ritik Dubey, backend and generative AI engineer at Dell Technologies, Bengaluru. Ride a BMTC bus through his resume.">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#1A1030;--muted:#5A5170;--sign:#FFC400;--red:#FF3B3B;--grn:#20E080;--disp:'Unbounded','Trebuchet MS',system-ui,sans-serif;--body:'DM Sans','Segoe UI',system-ui,sans-serif}
-*{box-sizing:border-box}
-html{background:#0D0820}
-body{margin:0;font:16px/1.6 var(--body);color:#fff;background:linear-gradient(#0D0820 0,#2B1455 48%,#6A2A6C 56%,#150F2A 57%) fixed}
+:root{--ink:#1A1030;--muted:#5A5170;--sign:#FFC400;--disp:'Unbounded','Trebuchet MS',system-ui,sans-serif;--body:'DM Sans','Segoe UI',system-ui,sans-serif}
+*{box-sizing:border-box}html{background:#0D0820}
+body{margin:0;font:16px/1.6 var(--body);color:#fff;background:linear-gradient(#0D0820 0,#2B1455 46%,#7A3A6C 54%,#150F2A 55%) fixed}
 #c{position:fixed;inset:0;width:100%;height:100%;display:block}
-#spacer{height:640vh}
-a{color:inherit}
+#spacer{height:940vh}
 :focus-visible{outline:3px solid var(--sign);outline-offset:3px;border-radius:6px}
-.top{position:fixed;left:0;right:0;top:0;padding:calc(12px + env(safe-area-inset-top,0px)) 18px 12px;display:flex;justify-content:space-between;align-items:center;gap:12px;z-index:5}
+.top{position:fixed;left:0;right:0;top:0;padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px;display:flex;justify-content:space-between;align-items:center;gap:10px;z-index:5}
 .top b{font:800 18px var(--disp)}
-#route{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
-#route button{background:rgba(13,8,32,.6);color:#fff;border:1.5px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 14px;font:500 14px var(--body);cursor:pointer;backdrop-filter:blur(6px)}
+#route{display:flex;gap:6px;overflow-x:auto;max-width:100%}
+#route button{flex:none;background:rgba(13,8,32,.65);color:#fff;border:1.5px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 13px;font:500 13px var(--body);cursor:pointer;backdrop-filter:blur(6px)}
 #route button[aria-current="true"]{background:var(--sign);color:var(--ink);border-color:var(--sign)}
-.hud{position:fixed;left:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:5;display:flex;align-items:center;gap:10px;background:rgba(13,8,32,.72);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:9px 16px;font-size:14px;backdrop-filter:blur(6px)}
-.hud i{width:14px;height:14px;border-radius:50%;background:var(--grn);box-shadow:0 0 12px currentColor;color:var(--grn)}
-.hero{position:fixed;left:max(24px,calc((100vw - 1100px)/2));top:22vh;z-index:3;max-width:min(560px,86vw);transition:opacity .4s,transform .4s;pointer-events:none}
+.hud{position:fixed;left:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:5;display:flex;align-items:center;gap:10px;background:rgba(13,8,32,.75);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:9px 16px;font-size:14px;backdrop-filter:blur(6px)}
+.hud i{width:14px;height:14px;border-radius:50%;box-shadow:0 0 12px currentColor}
+.hero{position:fixed;left:max(24px,calc((100vw - 1100px)/2));top:20vh;z-index:3;max-width:min(560px,86vw);transition:opacity .5s,transform .5s;pointer-events:none}
 .hero h1{font:800 clamp(38px,8vw,92px)/.95 var(--disp);letter-spacing:-.04em;margin:0 0 12px;text-shadow:0 4px 30px #000}
 .hero p{margin:0;font-size:18px;color:#E6DDF7;text-shadow:0 2px 14px #000}
 .hero.off{opacity:0;transform:translateY(-20px)}
-.p{position:fixed;right:max(24px,calc((100vw - 1100px)/2));top:50%;width:min(450px,calc(100vw - 32px));max-height:74vh;overflow:auto;background:#fff;color:var(--ink);border-radius:20px;padding:26px 26px 22px;border-top:10px solid var(--sign);z-index:4;opacity:0;visibility:hidden;transform:translateY(-44%);transition:opacity .35s,transform .35s,visibility .35s;box-shadow:0 24px 70px rgba(0,0,0,.5)}
+.p{position:fixed;right:max(24px,calc((100vw - 1100px)/2));top:50%;width:min(460px,calc(100vw - 32px));max-height:76vh;overflow:auto;background:#fff;color:var(--ink);border-radius:20px;padding:24px 26px 22px;border-top:10px solid var(--sign);z-index:4;opacity:0;visibility:hidden;transform:translateY(-44%);transition:opacity .5s,transform .5s,visibility .5s;box-shadow:0 24px 70px rgba(0,0,0,.5)}
 .p.on{opacity:1;visibility:visible;transform:translateY(-50%)}
-.p h2{font:800 26px/1.1 var(--disp);letter-spacing:-.03em;margin:0 0 14px}
-.p h3{font:600 15px var(--disp);margin:16px 0 4px}
-.p small{color:var(--muted);font-size:14px}
-.p ul{margin:6px 0 0;padding-left:20px}.p li{margin-bottom:6px}
-.p p{margin:0 0 12px;color:#3A3050}
-.r{display:grid;grid-template-columns:78px 1fr;gap:12px;padding:9px 0;border-bottom:1px dashed #D5CFE3;align-items:baseline}
-.r:last-child{border:0}.r b{font:800 24px var(--disp);color:#7B2D8E}
-.btn{display:inline-block;margin:6px 8px 0 0;padding:11px 20px;border-radius:12px;text-decoration:none;font-weight:500;border:2px solid var(--ink)}
-.btn.m{background:var(--sign);border-color:var(--sign)}
-.chips span{display:inline-block;margin:0 6px 6px 0;padding:3px 12px;border-radius:999px;background:#EFEAF8;font-size:14px}
-.chips .g{background:#DDF5E8}
-.static #c,.static #spacer,.static .hud,.static #route{display:none}
-.static .hero,.static .p{position:static;opacity:1;visibility:visible;transform:none;margin:24px auto;max-height:none}
-.static .hero{padding-top:70px}
-@media (max-width:760px){.p{top:auto;bottom:calc(70px + env(safe-area-inset-bottom,0px));right:16px;left:16px;width:auto;max-height:52vh;transform:translateY(20px);padding:20px}.p.on{transform:none}.hero{top:16vh}.top b{display:none}.hud{left:16px;bottom:calc(14px + env(safe-area-inset-bottom,0px))}}
+.p .at{font:500 13px var(--body);color:#7B2D8E;margin:0 0 4px}
+.p h2{font:800 25px/1.1 var(--disp);letter-spacing:-.03em;margin:0 0 12px}
+.p h3{font:600 14px var(--disp);margin:14px 0 3px}
+.p p{margin:0 0 10px;color:#3A3050}.p small{color:var(--muted)}
+.p ul{margin:4px 0 0;padding-left:20px}.p li{margin-bottom:5px}
+.r{display:grid;grid-template-columns:74px 1fr;gap:12px;padding:8px 0;border-bottom:1px dashed #D5CFE3;align-items:baseline}
+.r:last-of-type{border:0}.r b{font:800 23px var(--disp);color:#7B2D8E}
+.btn,.nx{display:inline-block;margin:8px 8px 0 0;padding:10px 18px;border-radius:12px;text-decoration:none;font:500 15px var(--body);border:2px solid var(--ink);background:none;color:var(--ink);cursor:pointer}
+.btn.m,.nx{background:var(--sign);border-color:var(--sign)}
+.chips span{display:inline-block;margin:0 6px 6px 0;padding:3px 12px;border-radius:999px;background:#EFEAF8;font-size:14px}.chips .g{background:#DDF5E8}
+.static #c,.static #spacer,.static .hud,.static #route,.static .nx{display:none}
+.static .hero,.static .p{position:static;opacity:1;visibility:visible;transform:none;margin:24px auto;max-height:none}.static .hero{padding-top:70px}
+@media (max-width:760px){.p{top:auto;bottom:calc(66px + env(safe-area-inset-bottom,0px));right:14px;left:14px;width:auto;max-height:54vh;transform:translateY(20px);padding:18px 20px}.p.on{transform:none}.hero{top:15vh}.top b{display:none}.hud{left:14px;bottom:calc(12px + env(safe-area-inset-bottom,0px))}}
+@media (prefers-reduced-motion:reduce){.p,.hero{transition:none}}
 </style>
 </head>
 <body>
 <canvas id="c" aria-hidden="true"></canvas>
 <div class="top"><b>RD</b><nav id="route" aria-label="Route"></nav></div>
-<div class="hud" id="hud"><i id="lamp"></i><span id="hs">Scroll to drive</span></div>
-<div class="hero" id="hero"><h1>Ritik<br>Dubey</h1><p>Backend + AI engineer. Scroll to drive through my resume. I stop at every signal.</p></div>
+<div class="hud"><i id="lamp"></i><span id="hs">Scroll to drive</span></div>
+<div class="hero" id="hero"><h1>Ritik<br>Dubey</h1><p>Backend + AI engineer. Hop on a BMTC bus and scroll through Bengaluru to read my resume.</p></div>
 
-<article class="p" id="p0"><h2>Hello, I’m Ritik</h2><p>I’m a <b>backend and generative AI engineer</b> at Dell Technologies in Bengaluru. I build secure, scalable services in Java, Spring Boot, .NET and Kafka, and I run an AI monitoring system in production using LangChain and RAG.</p><a class="btn m" href="mailto:swapthemg@gmail.com">Say hello</a><a class="btn" href="https://linkedin.com/in/ritik-dubey" rel="noopener">LinkedIn</a></article>
+<article class="p"><p class="at">Signal 1 · Silk Board Junction</p><h2>Hello, I’m Ritik</h2>
+<p>This junction is famous for its long red lights, so I’ll keep my story shorter than the wait.</p>
+<p>I’m a <b>backend and generative AI engineer</b> at Dell Technologies with 3+ years of experience. I build secure, scalable services in Java, Spring Boot, .NET and Kafka, and I run an AI monitoring system in production using LangChain and retrieval-augmented generation (RAG).</p>
+<ul><li>Software Engineer II at Dell, Bengaluru</li><li>B.Tech in Computer Science, KIIT, CGPA 9.32</li><li>Open to backend, GenAI and platform roles</li></ul>
+<a class="btn" href="https://linkedin.com/in/ritik-dubey" rel="noopener">LinkedIn</a><button class="nx" type="button">Drive on ›</button></article>
 
-<article class="p" id="p1"><h2>Where I’ve worked</h2>
-<h3>Software Engineer II · Feb 2026 – now</h3><ul><li>Built and deployed a production AI monitoring system with LangChain and RAG.</li><li>Migrated 17 PCF apps to Kubernetes and upgraded .NET 8 to .NET 10.</li><li>Built a Vault-integrated service that fetches secrets dynamically.</li></ul>
-<h3>Software Engineer I · Aug 2023 – Feb 2026</h3><ul><li>Java, Spring Boot and .NET APIs with Kafka streams and Redis caching.</li><li>Automated NAS file ingestion and built Oracle APEX tools that cut manual effort by 70%.</li></ul>
-<h3>Dell intern · 2022 and 2023</h3><ul><li>Cut click-to-response latency by 60% on Dell.com calls to action.</li></ul></article>
+<article class="p"><p class="at">Signal 2 · Cubbon Park</p><h2>Where I’ve worked</h2>
+<h3>Software Engineer II · Feb 2026 – now</h3><ul><li>Built and deployed a production AI monitoring system with LangChain and RAG.</li><li>Migrated 17 PCF apps to Kubernetes while upgrading .NET 8 to .NET 10, and made them security compliant.</li><li>Built a Vault-integrated service that fetches secrets dynamically instead of using static config.</li></ul>
+<h3>Software Engineer I · Aug 2023 – Feb 2026</h3><ul><li>Built Java, Spring Boot and .NET APIs with Kafka event streams and Redis caching.</li><li>Automated NAS file ingestion and built Oracle APEX tools that cut manual effort by 70%.</li></ul>
+<h3>Dell intern · 2022 and 2023</h3><ul><li>Cut click-to-response latency by 60% on Dell.com calls to action.</li></ul><button class="nx" type="button">Drive on ›</button></article>
 
-<article class="p" id="p2"><h2>Results</h2>
-<div class="r"><b>65%</b><span>Better platform scalability on Docker and Kubernetes</span></div>
+<article class="p"><p class="at">Signal 3 · Vidhana Soudha</p><h2>What I’ve delivered</h2>
+<div class="r"><b>65%</b><span>Better platform scalability by moving to microservices on Docker and Kubernetes</span></div>
+<div class="r"><b>17</b><span>PCF apps migrated to Kubernetes and brought into security compliance</span></div>
 <div class="r"><b>45%</b><span>Better Kafka ingestion efficiency with optimised .NET APIs</span></div>
-<div class="r"><b>50%</b><span>Lower API latency with Redis and async processing</span></div>
-<div class="r"><b>17</b><span>PCF apps moved to Kubernetes and made security compliant</span></div>
-<div class="r"><b>100%</b><span>CI/CD deployment health with Jenkins, GitLab and SonarQube</span></div></article>
+<div class="r"><b>50%</b><span>Lower API latency using Redis caching and async processing</span></div>
+<div class="r"><b>100%</b><span>CI/CD deployment health with Jenkins, GitLab, SonarQube and JUnit</span></div><button class="nx" type="button">Drive on ›</button></article>
 
-<article class="p" id="p3"><h2>Toolbox</h2>
-<div class="chips"><span>Java</span><span>Spring Boot</span><span>.NET Core</span><span>Python</span><span>FastAPI</span><span>Angular</span><span>Kafka</span><span>Redis</span><span>Oracle</span><span>SQL Server</span><span class="g">Docker</span><span class="g">Kubernetes</span><span class="g">PCF</span><span class="g">Jenkins</span><span class="g">GitLab CI/CD</span><span class="g">Vault</span><span class="g">LangChain</span><span class="g">RAG</span><span class="g">MCP</span><span class="g">A2A</span></div>
-<h3>Certified in</h3><ul><li>Building AI Agents: Advanced Techniques</li><li>Model Context Protocol (MCP)</li><li>AI Agents with MCP and Agent2Agent</li><li>CI/CD with GitLab</li></ul><small>B.Tech, Computer Science, KIIT · CGPA 9.32</small></article>
+<article class="p"><p class="at">Signal 4 · Lalbagh</p><h2>Toolbox and learning</h2>
+<h3>Backend and data</h3><div class="chips"><span>Java</span><span>Spring Boot</span><span>.NET Core</span><span>Python</span><span>FastAPI</span><span>Angular</span><span>Kafka</span><span>Redis</span><span>Oracle</span><span>SQL Server</span></div>
+<h3>Platform and AI</h3><div class="chips"><span class="g">Docker</span><span class="g">Kubernetes</span><span class="g">PCF</span><span class="g">Jenkins</span><span class="g">GitLab CI/CD</span><span class="g">Vault</span><span class="g">LangChain</span><span class="g">RAG</span><span class="g">MCP</span><span class="g">A2A</span></div>
+<h3>Certified in</h3><ul><li>Building AI Agents: Advanced Techniques</li><li>Model Context Protocol (MCP)</li><li>AI Agents with MCP and Agent2Agent</li><li>CI/CD with GitLab</li></ul><button class="nx" type="button">Drive on ›</button></article>
 
-<article class="p" id="p4"><h2>Final stop: your team?</h2><p>I’m open to backend, GenAI and platform engineering roles. Tell me what you’re building.</p><a class="btn m" href="mailto:swapthemg@gmail.com">swapthemg@gmail.com</a><a class="btn" href="https://linkedin.com/in/ritik-dubey" rel="noopener">LinkedIn</a></article>
+<article class="p"><p class="at">Signal 5 · Majestic bus station</p><h2>Final stop: all aboard?</h2>
+<p>Every BMTC route ends up at Majestic, and this one ends here too. If you’re building something in backend, GenAI or platform engineering, I’d love to hear about it.</p>
+<a class="btn m" href="mailto:swapthemg@gmail.com">swapthemg@gmail.com</a><a class="btn" href="https://linkedin.com/in/ritik-dubey" rel="noopener">LinkedIn</a><button class="nx" type="button">Ride again ↑</button></article>
 
 <div id="spacer"></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 (function(){
-const N=5,GAP=60,LX=-2.6,names=["Hello","Experience","Results","Toolbox","Contact"];
+const N=5,GAP=64,LX=-3,places=[["Silk Board","SILK BOARD JUNCTION"],["Cubbon Park","CUBBON PARK"],["Vidhana Soudha","VIDHANA SOUDHA"],["Lalbagh","LALBAGH"],["Majestic","MAJESTIC · KEMPEGOWDA BUS STATION"]];
 const P=[...document.querySelectorAll('.p')],hero=document.getElementById('hero'),hs=document.getElementById('hs'),lamp=document.getElementById('lamp'),rt=document.getElementById('route');
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 let R;try{R=new THREE.WebGLRenderer({canvas:document.getElementById('c'),antialias:true,alpha:true})}catch(e){}
 if(!R||typeof THREE==='undefined'){document.body.classList.add('static');return}
-const lineZ=i=>-i*GAP-10,stopC=i=>lineZ(i)+2.2,startZ=stopC(0)+48,END=-(N*GAP+120);
-const S=new THREE.Scene();S.fog=new THREE.Fog(0x2B1455,22,150);
+const lineZ=i=>-i*GAP-10,stopC=i=>lineZ(i)+4.6,startZ=stopC(0)+55,END=-(N*GAP+130),len=Math.abs(END)+90;
+const wv=z=>(-z-10)/GAP,sg=w=>((Math.floor(w)%2)+2)%2?-1:1;
+const cx=z=>{const w=wv(z);return 9*sg(w)*Math.pow(Math.sin(Math.PI*w),2)},cm=z=>{const w=wv(z);return -9*sg(w)*Math.PI*Math.sin(2*Math.PI*w)/GAP};
+const S=new THREE.Scene();S.fog=new THREE.Fog(0x2B1455,28,170);
 const cam=new THREE.PerspectiveCamera(58,1,.1,300);
-S.add(new THREE.AmbientLight(0x9a88d8,.85));const sun=new THREE.DirectionalLight(0xffb080,.7);sun.position.set(-10,20,10);S.add(sun);
-const pl=new THREE.PointLight(0x20e080,1.4,32);S.add(pl);
+S.add(new THREE.AmbientLight(0x9a88d8,.9));const sun=new THREE.DirectionalLight(0xffb080,.7);sun.position.set(-10,20,10);S.add(sun);
+const pl=new THREE.PointLight(0x20e080,1.4,34);S.add(pl);
 const L=c=>new THREE.MeshLambertMaterial({color:c}),B=c=>new THREE.MeshBasicMaterial({color:c});
 const box=(w,h,d,m,x,y,z,par)=>{const o=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);o.position.set(x,y,z);(par||S).add(o);return o};
-const len=Math.abs(END)+80;
-box(15,.2,len,L(0x17132B),0,-.1,END/2+20);
-[-1,1].forEach(s=>box(5,.4,len,L(0x2A2548),s*10,0,END/2+20));
-const dm=B(0xddd6f0);for(let z=50;z>END;z-=6)box(.25,.02,2.6,dm,0,.01,z);
-for(let i=0;i<N;i++){box(6,.02,.35,dm,LX,.02,lineZ(i));for(let x=-6.5;x<=1;x+=1.5)box(.8,.02,2.6,dm,x,.02,lineZ(i)-2)}
-const sc=[0x3B2A6B,0x2F3C78,0x4B2A62,0x284A6E],sg=[0xFFC400,0x40E0FF,0xFF5FA2];
-for(let s=-1;s<=1;s+=2)for(let z=50;z>END;z-=7.5){const w=4+Math.random()*4,h=6+Math.random()*22;box(w,h,6,L(sc[Math.floor(Math.random()*4)]),s*(13+w/2+Math.random()*3),h/2,z+Math.random()*2);
- if(Math.random()<.4)box(2.2,.9,.1,B(sg[Math.floor(Math.random()*3)]),s*(13+w/2)-s*w/2*0.99+(-s)*0.3,2+Math.random()*4,z+3.1)}
+function tex(w,h,fn){const c=document.createElement('canvas');c.width=w;c.height=h;fn(c.getContext('2d'),w,h);return new THREE.CanvasTexture(c)}
+function ribbon(x0,x1,y,col){const pos=[],nor=[],idx=[];let n=0;for(let z=60;z>=END;z-=2){pos.push(cx(z)+x0,y,z,cx(z)+x1,y,z);nor.push(0,1,0,0,1,0);if(n){const a=(n-1)*2;idx.push(a,a+1,a+2,a+1,a+3,a+2)}n++}
+ const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));g.setAttribute('normal',new THREE.Float32BufferAttribute(nor,3));g.setIndex(idx);const m=L(col);m.side=THREE.DoubleSide;S.add(new THREE.Mesh(g,m))}
+ribbon(-7.5,7.5,0,0x17132B);ribbon(-13,-7.5,.05,0x2A2548);ribbon(7.5,13,.05,0x2A2548);
+const dm=B(0xddd6f0);for(let z=55;z>END;z-=6){const d=box(.25,.02,2.6,dm,cx(z),.03,z);d.rotation.y=Math.atan(cm(z))}
+for(let i=0;i<N;i++){box(7,.03,.35,dm,LX,.04,lineZ(i));for(let x=-7;x<=1;x+=1.5)box(.8,.03,2.6,dm,x,.04,lineZ(i)-2.6)}
+const tg=new THREE.CylinderGeometry(.25,.32,2.4,6),fg=new THREE.ConeGeometry(2,4.6,7),tm=L(0x5a3b24),fm=[L(0x1F6B3A),L(0x2E8B4A),L(0x185C34)];
+function tree(par,x,z,s){const g=new THREE.Group();const t=new THREE.Mesh(tg,tm);t.position.y=1.2;g.add(t);const a=new THREE.Mesh(fg,fm[Math.floor(Math.random()*3)]);a.position.y=4;g.add(a);const b=new THREE.Mesh(fg,fm[1]);b.position.y=6;b.scale.set(.7,.8,.7);g.add(b);g.position.set(x,0,z);g.scale.setScalar(s);par.add(g)}
+const bc=[0x3B2A6B,0x2F3C78,0x4B2A62,0x284A6E],sc=[0xFFC400,0x40E0FF,0xFF5FA2];
+for(let s=-1;s<=1;s+=2)for(let z=55;z>END;z-=7.5){const w=4+Math.random()*4,h=6+Math.random()*22,x=cx(z)+s*(20+w/2+Math.random()*4);box(w,h,6,L(bc[Math.floor(Math.random()*4)]),x,h/2,z);
+ if(Math.random()<.4)box(2.2,.9,.1,B(sc[Math.floor(Math.random()*3)]),x-s*w/2,2+Math.random()*4,z+3.1)}
+for(let s=-1;s<=1;s+=2)for(let z=55;z>END;z-=8+Math.random()*3)tree(S,cx(z)+s*(11+Math.random()*5),z,.8+Math.random()*.5);
 const lm=[0xFF3B3B,0xFFC400,0x20E080],dim=[0x401820,0x40380f,0x0f4025],sig=[];
-for(let i=0;i<N;i++){const g=new THREE.Group();g.position.set(-7.4,0,lineZ(i)-.5);S.add(g);
- const pole=new THREE.Mesh(new THREE.CylinderGeometry(.12,.14,5.6,8),L(0x555066));pole.position.y=2.8;g.add(pole);
- box(.95,2.5,.8,L(0x15121f),0,5.9,0,g);const ls=[];
- for(let k=0;k<3;k++){const l=new THREE.Mesh(new THREE.SphereGeometry(.32,14,10),B(dim[k]));l.position.set(0,6.7-k*.8,.45);g.add(l);ls.push(l)}sig.push(ls)}
-function setSig(j,st){sig[j].forEach((l,k)=>l.material.color.setHex(k===st?lm[k]:dim[k]))}
-const car=new THREE.Group();S.add(car);const bd=new THREE.Group();car.add(bd);
-box(1.7,.8,3,L(0x17A34A),0,.8,0,bd);box(1,.9,1.1,L(0xFFC400),0,1.15,-1.3,bd);box(1.9,.12,2.5,L(0xFFC400),0,2.2,.3,bd);
-[[-.8,-.7],[.8,-.7],[-.8,1.2],[.8,1.2]].forEach(p=>box(.07,1.2,.07,L(0x15121f),p[0],1.6,p[1]+.1,bd));
-box(1.5,.5,.6,L(0x2a2438),0,1.35,1.1,bd);box(.3,.3,.1,B(0xfff3b0),0,1.1,-1.86,bd);
-const bl=B(0x550000),b1=box(.3,.2,.08,bl,-.6,.95,1.52,bd),b2=box(.3,.2,.08,bl,.6,.95,1.52,bd);
-const wg=new THREE.CylinderGeometry(.4,.4,.28,14);wg.rotateZ(Math.PI/2);const wh=[];
-[[0,-1.3],[-.9,1],[.9,1]].forEach(p=>{const w=new THREE.Mesh(wg,L(0x111111));w.position.set(p[0],.4,p[1]);car.add(w);wh.push(w)});
+for(let i=0;i<N;i++){const g=new THREE.Group();g.position.set(-8.3,0,lineZ(i)-.5);S.add(g);const p=new THREE.Mesh(new THREE.CylinderGeometry(.12,.14,5.6,8),L(0x555066));p.position.y=2.8;g.add(p);
+ box(.95,2.5,.8,L(0x15121f),0,5.9,0,g);const ls=[];for(let k=0;k<3;k++){const l=new THREE.Mesh(new THREE.SphereGeometry(.32,14,10),B(dim[k]));l.position.set(0,6.7-k*.8,.45);g.add(l);ls.push(l)}sig.push(ls);
+ const gz=lineZ(i)-8;[-9,9].forEach(x=>box(.3,8,.3,L(0x555066),x,4,gz));box(19,2.8,.3,L(0x0B2A1A),0,8.6,gz);
+ const t=tex(1024,140,(c,w,h)=>{c.fillStyle='#0B6B3A';c.fillRect(0,0,w,h);c.strokeStyle='#fff';c.lineWidth=8;c.strokeRect(8,8,w-16,h-16);c.fillStyle='#fff';c.font='bold 64px Arial,sans-serif';c.textAlign='center';c.textBaseline='middle';c.fillText(places[i][1],w/2,h/2+4)});
+ const pn=new THREE.Mesh(new THREE.PlaneGeometry(18.6,2.6),B(0xffffff));pn.material.map=t;pn.position.set(0,8.6,gz+.2);S.add(pn)}
+const setSig=(j,st)=>sig[j].forEach((l,k)=>l.material.color.setHex(k===st?lm[k]:dim[k]));
+const dest=tex(256,64,(c,w,h)=>{c.fillStyle='#111';c.fillRect(0,0,w,h);c.fillStyle='#FFB000';c.font='bold 34px Arial,sans-serif';c.textAlign='center';c.textBaseline='middle';c.fillText('BMTC · RESUME',w/2,h/2+2)});
+function makeBus(main,info){const g=new THREE.Group(),b=new THREE.Group();g.add(b);
+ box(2.5,1.5,8,L(main),0,.95,0,b);box(2.5,1.4,8,L(0xF2F5FA),0,2.4,0,b);box(2.56,.85,6.8,L(0x1B2A44),0,2.45,0,b);box(2.52,.45,8.02,L(0x1E5BB8),0,1.25,0,b);box(2.54,.1,8.04,L(0xFFC400),0,1.65,0,b);box(2.4,.15,7.9,L(0xDDE3EE),0,3.15,0,b);
+ box(2.1,1,.1,L(0x1B2A44),0,2.45,-4.02,b);box(2.1,.9,.06,L(0xfff0b0),0,3.15,0,b).scale.set(1,.01,1);
+ [-.9,.9].forEach(x=>{box(.3,.2,.08,B(0xfff3b0),x,.9,-4.03,b)});
+ const dp=new THREE.Mesh(new THREE.PlaneGeometry(1.8,.45),B(0xffffff));dp.material.map=dest;dp.position.set(0,3.0,-4.05);dp.rotation.y=Math.PI;b.add(dp);
+ const bl=B(0x550000);[-.9,.9].forEach(x=>box(.3,.2,.08,bl,x,.9,4.03,b));
+ const wg=new THREE.CylinderGeometry(.55,.55,.35,14);wg.rotateZ(Math.PI/2);const wh=[];[[-1.25,-2.6],[1.25,-2.6],[-1.25,2.4],[1.25,2.4]].forEach(p=>{const w=new THREE.Mesh(wg,L(0x111111));w.position.set(p[0],.55,p[1]);g.add(w);wh.push(w)});
+ info.bd=b;info.wh=wh;info.bl=bl;return g}
+const bus=makeBus(0xF2F5FA,{}),bi={};const car=makeBus(0xF2F5FA,bi);S.add(car);
+const LMs=[g=>{[-1].forEach(()=>{box(8,1.2,50,L(0x6B6780),0,9,0,g);box(.5,.8,50,L(0xFFC400),3.7,10,0,g);for(let z=-20;z<=20;z+=10)box(1.8,9,1.8,L(0x55516a),0,4.5,z,g)})},
+ g=>{for(let k=0;k<20;k++)tree(g,(Math.random()-.5)*26,(Math.random()-.5)*26,1.1+Math.random()*.6)},
+ g=>{const c=L(0xC48A6A);box(26,6,11,c,0,3,0,g);box(18,4,9,L(0xB87A5A),0,8,0,g);box(8,3,8,c,0,11.5,0,g);const d=new THREE.Mesh(new THREE.SphereGeometry(3.6,16,10),L(0xA86A4C));d.scale.y=.8;d.position.y=14;g.add(d);for(let x=-11;x<=11;x+=2.2)box(.7,5,.7,L(0xE0B89C),x,3,6,g)},
+ g=>{const m=new THREE.MeshLambertMaterial({color:0x9FD8F0,transparent:true,opacity:.55});box(16,5,10,m,0,2.5,0,g);box(16.4,.5,10.4,L(0x3E5C76),0,5.2,0,g);box(9,2.5,6,m,0,6.5,0,g);for(let k=0;k<12;k++)tree(g,(Math.random()-.5)*30,10+Math.random()*10,1.2)},
+ g=>{box(34,.6,16,L(0x3A4A6B),0,7,0,g);[-15,-5,5,15].forEach(x=>[-6,6].forEach(z=>box(.8,7,.8,L(0x777788),x,3.5,z,g)));[0,1,2].forEach(k=>{const b=makeBus(0xF2F5FA,{});b.position.set(-10+k*10,0,0);g.add(b)})}];
+LMs.forEach((f,i)=>{const g=new THREE.Group(),z=lineZ(i)-16;g.position.set(cx(z)-28,0,z);S.add(g);f(g)});
+const ph=[];const pm=B(0x06040d),pr=B(0x3a3355);
+for(let z=30;z>END+30;z-=9+Math.random()*8){const f=((-z-10)%GAP+GAP)%GAP;if(f<14||f>GAP-8)continue;const x=cx(z)+LX+(Math.random()-.5)*2.6,s=.7+Math.random()*.6;
+ const r=new THREE.Mesh(new THREE.CircleGeometry(s*1.15,14),pr);r.rotation.x=-Math.PI/2;r.position.set(x,.045,z);r.scale.y=.8;S.add(r);
+ const d=new THREE.Mesh(new THREE.CircleGeometry(s,14),pm);d.rotation.x=-Math.PI/2;d.position.set(x,.055,z);d.scale.y=.8;S.add(d);ph.push({z,x,h:0})}
 const tr=[],tc=[0xC0392B,0x2980B9,0xF39C12,0x8E44AD,0xECF0F1,0x16A085];
-for(let i=0;i<10;i++){const g=new THREE.Group(),m=L(tc[i%6]);box(1.9,.9,3.8,m,0,.8,0,g);box(1.6,.7,1.9,L(0x20203a),0,1.5,.2,g);box(.35,.2,.08,B(0xff2020),-.6,.9,-1.92,g);box(.35,.2,.08,B(0xff2020),.6,.9,-1.92,g);
- g.position.set(i%2?2.6:5.2,0,60-i*(len/10));g.rotation.y=Math.PI;S.add(g);tr.push(g)}
+for(let i=0;i<12;i++){let g;if(i%6===5){g=makeBus(0xF2F5FA,{})}else{g=new THREE.Group();const m=L(tc[i%6]);box(1.9,.9,3.8,m,0,.8,0,g);box(1.6,.7,1.9,L(0x20203a),0,1.5,.2,g);box(.35,.2,.08,B(0xff2020),-.6,.9,-1.92,g);box(.35,.2,.08,B(0xff2020),.6,.9,-1.92,g)}
+ g.userData.x=i%2?2.8:5.6;g.position.z=60-i*(len/12);S.add(g);tr.push(g)}
 function size(){R.setPixelRatio(Math.min(2,devicePixelRatio));R.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()}
 size();addEventListener('resize',size);
-names.forEach((n,i)=>{const b=document.createElement('button');b.textContent=n;b.type='button';b.onclick=()=>{const m=document.documentElement.scrollHeight-innerHeight;scrollTo({top:m*(i+.65)/N,behavior:reduce?'auto':'smooth'})};rt.appendChild(b)});
+const go=i=>{const m=document.documentElement.scrollHeight-innerHeight;scrollTo({top:i>=N?0:m*(i+.6)/N,behavior:reduce?'auto':'smooth'})};
+places.forEach((n,i)=>{const b=document.createElement('button');b.textContent=n[0];b.type='button';b.onclick=()=>go(i);rt.appendChild(b)});
+P.forEach((p,j)=>{p.querySelector('.nx').onclick=()=>go(j+1)});
 const rb=[...rt.children];
-let sp=0,last=performance.now(),lz=startZ,spd=0,shake=0,pk=0,dip=0,lt='',ls=-1;
+let sp=0,last=performance.now(),lz=startZ,spd=0,shake=0,dip=0,bump=0,ls=-1,lt=-1,pt='';
 function frame(now){const dt=Math.min(.05,(now-last)/1000)||.016;last=now;
- const m=document.documentElement.scrollHeight-innerHeight,tg=m>0?scrollY/m:0;sp+=(tg-sp)*(1-Math.exp(-dt*7));
- const s=Math.min(.9999,Math.max(0,sp))*N,i=Math.floor(s),t=s-i,from=i?stopC(i-1):startZ,to=stopC(i),k=Math.min(1,t/.45),z=from+(to-from)*(1-Math.pow(1-k,3));
- const dz=z-lz;lz=z;const v=Math.abs(dz)/dt;const dec=(spd-v)/dt;spd+=(v-spd)*Math.min(1,dt*10);
- if(pk<1&&k>=1&&dz<0)shake=1;pk=k;shake*=Math.exp(-dt*7);dip+=((dec>25?Math.min(1,dec/90):0)-dip)*Math.min(1,dt*12);
- car.position.set(LX,0,z);bd.rotation.x=-.08*dip;wh.forEach(w=>w.rotation.x+=dz/.4);
- const st=i<N-1&&t>=.88?2:t<.2?2:t<.35?1:0;
+ const m=document.documentElement.scrollHeight-innerHeight,tgt=m>0?scrollY/m:0;sp+=(tgt-sp)*(1-Math.exp(-dt*4.5));
+ const s=Math.min(.9999,Math.max(0,sp))*N,i=Math.floor(s),t=s-i,from=i?stopC(i-1):startZ,to=stopC(i),k=Math.min(1,t/.38),z=from+(to-from)*k*k*(3-2*k);
+ const dz=z-lz;lz=z;const v=Math.abs(dz)/dt,dec=(spd-v)/dt;spd+=(v-spd)*Math.min(1,dt*8);
+ dip+=((dec>8?Math.min(1,dec/40):0)-dip)*Math.min(1,dt*8);
+ const x=cx(z)+LX;car.position.set(x,0,z);car.rotation.y=Math.atan(cm(z));bi.bd.rotation.x=-.03*dip;bi.wh.forEach(w=>w.rotation.x+=dz/.55);
+ if(!reduce)ph.forEach(p=>{const d=Math.abs(z-p.z);if(d<2&&Math.abs(x-p.x)<1.7&&!p.h&&spd>3){p.h=1;bump=1}else if(d>6)p.h=0});
+ bump*=Math.exp(-dt*4);const by=Math.sin(now*.05)*.1*bump;bi.bd.position.y=by;bi.bd.rotation.z=Math.sin(now*.035)*.025*bump;
+ const last_=i===N-1,st=t<.18?2:t<.3?1:(t<.78||last_)?0:2;
  if(ls!==i||lt!==st){for(let j=0;j<N;j++)setSig(j,j===i?st:2);ls=i;lt=st}
- pl.position.set(-6,6,lineZ(i)+1.5);pl.color.setHex(lm[st]);
- const br=(t>.2&&(t<.88||i===N-1))?1:0;bl.color.setHex(br?0xff2020:0x550000);
- cam.position.set(-1.2,3.5+Math.sin(now*.06)*.09*shake*(reduce?0:1),z+9);cam.lookAt(-1.4,1.4,z-9);
- if(!reduce)tr.forEach(c=>{c.position.z+=15*dt;if(c.position.z>60)c.position.z=END});
- const show=t>=.45&&(t<.88||i===N-1);
- P.forEach((p,j)=>p.classList.toggle('on',show&&j===i));hero.classList.toggle('off',i>0||t>.9);
- rb.forEach((b,j)=>b.setAttribute('aria-current',j===i&&t>.3?'true':'false'));
- const txt=Math.round(Math.min(60,spd*1.2))+' km/h · '+(st===0?'Red signal':st===1?'Slowing':'Green')+' · '+names[i];
- if(txt!==hs.textContent)hs.textContent=txt;lamp.style.background=lamp.style.color=['#FF3B3B','#FFC400','#20E080'][st];
+ pl.position.set(-7,6,lineZ(i)+1.5);pl.color.setHex(lm[st]);
+ bi.bl.color.setHex(t>.12&&(t<.78||last_)?0xff2020:0x550000);
+ cam.position.set(cx(z+14)+LX*.55,5.6+by*.7,z+14);cam.lookAt(cx(z-14)+LX*.45,1.8,z-14);
+ if(!reduce)tr.forEach(c=>{c.position.z+=14*dt;if(c.position.z>60)c.position.z=END;const zz=c.position.z;c.position.x=cx(zz)+c.userData.x;c.rotation.y=Math.PI+Math.atan(cm(zz))});
+ const show=t>=.4&&(t<.88||last_);P.forEach((p,j)=>p.classList.toggle('on',show&&j===i));hero.classList.toggle('off',i>0||t>.3);
+ rb.forEach((b,j)=>b.setAttribute('aria-current',j===i&&t>.2?'true':'false'));
+ const txt=Math.round(Math.min(50,spd*1.4))+' km/h · '+(st===0?'Red signal':st===1?'Slowing down':'Green')+' · '+places[i][0];
+ if(txt!==pt){hs.textContent=txt;pt=txt;lamp.style.background=lamp.style.color=['#FF3B3B','#FFC400','#20E080'][st]}
  R.render(S,cam);requestAnimationFrame(frame)}
 requestAnimationFrame(frame);
 })();
