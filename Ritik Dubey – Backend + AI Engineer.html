@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ritik Dubey – Backend + AI Engineer</title>
+<meta name="description" content="Ritik Dubey is a backend and AI engineer at Dell Technologies building scalable Java, Spring Boot, .NET and Kafka systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5F9;--surface:#FFFFFF;--ink:#0E1B2E;--muted:#4A5B73;--line:#D5DDE8;
+  --accent:#2B50FF;--accent-ink:#FFFFFF;--signal:#E89A00;
+  --display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0B1220;--surface:#131D30;--ink:#EAF0FA;--muted:#9DB0CC;--line:#243653;--accent:#7C95FF;--accent-ink:#0B1220;--signal:#FFB93B;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0B1220;--surface:#131D30;--ink:#EAF0FA;--muted:#9DB0CC;--line:#243653;--accent:#7C95FF;--accent-ink:#0B1220;--signal:#FFB93B;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+nav .logo{font-family:var(--display);font-weight:800;font-size:20px;text-decoration:none}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;align-items:center}
+nav a{text-decoration:none;color:var(--muted);font-size:15px}
+nav a:hover{color:var(--ink)}
+.theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 14px;font:inherit;font-size:14px;cursor:pointer}
+.hero{padding:56px 0 40px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(36px,6.5vw,72px);line-height:1.04;letter-spacing:-.03em;margin:0 0 22px}
+.lede{font-size:clamp(18px,2.4vw,23px);max-width:34em;color:var(--muted);margin:0 0 30px}
+.lede b{color:var(--ink);font-weight:500}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 24px;border-radius:10px;text-decoration:none;font-weight:500;border:1px solid var(--line)}
+.btn.main{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn:hover{transform:translateY(-1px)}
+
+/* signature: live request trace */
+.trace{margin:44px 0 0;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px 24px 20px}
+.trace h2{font-family:var(--display);font-size:18px;margin:0 0 4px}
+.trace p{margin:0 0 26px;color:var(--muted);font-size:15px}
+.rail{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.rail::before{content:"";position:absolute;left:10%;right:10%;top:22px;height:2px;background:var(--line)}
+.packet{position:absolute;top:15px;left:10%;width:16px;height:16px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 6px color-mix(in srgb,var(--signal) 25%,transparent);animation:go 5s cubic-bezier(.6,0,.4,1) infinite}
+@keyframes go{0%{left:10%}85%,100%{left:calc(90% - 16px)}}
+.node{position:relative;text-align:center;background:none;border:0;color:inherit;font:inherit;cursor:pointer;padding:0}
+.node .dot{display:block;width:44px;height:44px;margin:0 auto 10px;border-radius:12px;background:var(--bg);border:2px solid var(--accent);position:relative;z-index:1;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:13px;color:var(--accent)}
+.node[aria-pressed="true"] .dot{background:var(--accent);color:var(--accent-ink)}
+.node span.n{display:block;font-weight:500;font-size:14px}
+.readout{margin-top:22px;padding:14px 16px;border-radius:12px;background:var(--bg);border:1px solid var(--line);font-size:15px;min-height:3.6em}
+
+.pill{display:inline-flex;align-items:center;gap:10px;margin:0 0 22px;padding:7px 16px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:15px}
+.live{width:10px;height:10px;border-radius:50%;background:#1FAF6B;box-shadow:0 0 0 4px color-mix(in srgb,#1FAF6B 25%,transparent)}
+.card{transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px color-mix(in srgb,var(--accent) 14%,transparent)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.about p{margin:0 0 12px;color:var(--muted)}
+.facts{list-style:none;margin:0;padding:0}
+.facts li{padding:10px 0;border-bottom:1px solid var(--line)}
+.facts li:last-child{border:0}
+.facts b{font-weight:500}
+.btn,.card,.theme{border-radius:14px}
+@media (prefers-reduced-motion:reduce){.card:hover{transform:none}}
+section{padding:64px 0 8px}
+h2.s{font-family:var(--display);font-weight:800;font-size:clamp(30px,5vw,46px);letter-spacing:-.02em;line-height:1.05;margin:0 0 28px}
+.proj{display:grid;gap:20px;grid-template-columns:1.3fr 1fr}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
+.card h3{font-family:var(--display);font-size:22px;margin:0 0 8px;line-height:1.2}
+.card p{margin:0 0 10px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tag{font-size:13px;padding:3px 11px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.big{border-color:var(--accent)}
+
+.timeline{border-left:2px solid var(--line);margin-left:6px;padding-left:28px}
+.job{position:relative;margin-bottom:38px}
+.job::before{content:"";position:absolute;left:-37px;top:9px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.job h3{font-family:var(--display);font-size:23px;margin:0}
+.job .when{color:var(--muted);font-size:15px;margin:2px 0 12px}
+.job ul{margin:0;padding-left:20px}
+.job li{margin-bottom:8px;max-width:46em}
+.job li b{font-weight:500;color:var(--accent)}
+
+.stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.stack .card{padding:20px}
+.stack h3{font-size:17px}
+.stack p{margin:0;font-size:15px}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.list{margin:0;padding-left:20px;color:var(--muted)}
+.list li{margin-bottom:6px}
+.contact{padding:64px 0 80px}
+.contact .card{text-align:left;background:var(--accent);color:var(--accent-ink);border:0;padding:40px}
+.contact h2{font-family:var(--display);font-weight:800;font-size:clamp(30px,5vw,48px);margin:0 0 10px;line-height:1.05}
+.contact p{color:inherit;opacity:.9;max-width:32em}
+.contact .btn{background:var(--accent-ink);color:var(--accent);border-color:var(--accent-ink);margin-top:10px}
+footer{border-top:1px solid var(--line);padding:22px 0 30px;color:var(--muted);font-size:14px}
+
+@media (max-width:760px){
+  nav ul li:not(:last-child){display:none}
+  .proj,.two,.about{grid-template-columns:1fr}
+  .node span.n{font-size:12px}
+  .node .dot{width:36px;height:36px;font-size:11px}
+  .rail::before,.packet{top:18px}
+  .packet{top:11px}
+}
+@media (prefers-reduced-motion:reduce){.packet{animation:none;left:10%}html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="logo" href="#top">Ritik Dubey</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button class="theme" id="theme" type="button" aria-label="Toggle colour theme">Theme</button></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <p class="pill"><span class="live" aria-hidden="true"></span>Open to new opportunities</p>
+    <h1>Hi, I’m Ritik 👋<br>I build backends that stay up and get smarter.</h1>
+    <p class="lede">I’m a <b>Backend + AI engineer</b> at Dell Technologies in Bengaluru. I spend my days on Java, Spring Boot, .NET and Kafka systems that run at enterprise scale, and I recently shipped an AI monitoring assistant to production.</p>
+    <div class="cta">
+      <a class="btn main" href="mailto:swapthemg@gmail.com">Say hello</a>
+      <a class="btn" href="#work">See my work</a>
+      <a class="btn" href="https://linkedin.com/in/ritik-dubey" rel="noopener">LinkedIn</a>
+    </div>
+
+    <div class="trace">
+      <h2>Follow a request through my stack</h2>
+      <p>Select a stage to see what I built there.</p>
+      <div class="rail" role="group" aria-label="Request path">
+        <div class="packet" aria-hidden="true"></div>
+        <button class="node" type="button" data-i="0" aria-pressed="true"><span class="dot">API</span><span class="n">Gateway</span></button>
+        <button class="node" type="button" data-i="1" aria-pressed="false"><span class="dot">Vault</span><span class="n">Secrets</span></button>
+        <button class="node" type="button" data-i="2" aria-pressed="false"><span class="dot">Kafka</span><span class="n">Events</span></button>
+        <button class="node" type="button" data-i="3" aria-pressed="false"><span class="dot">Redis</span><span class="n">Cache</span></button>
+        <button class="node" type="button" data-i="4" aria-pressed="false"><span class="dot">DB</span><span class="n">Oracle</span></button>
+      </div>
+      <div class="readout" id="readout" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2 class="s">A little about me</h2>
+    <div class="about">
+      <div class="card">
+        <p>I like turning messy, slow or fragile systems into ones teams can trust. Most of my work is behind the scenes: APIs, event streams, caching, secure deployments and the pipelines that ship them.</p>
+        <p>Lately I’ve been adding AI to that mix, using LangChain, RAG and agent tooling to make monitoring and operations easier for people.</p>
+      </div>
+      <div class="card">
+        <ul class="facts">
+          <li><b>Based in:</b> Bengaluru, India</li>
+          <li><b>Currently:</b> Software Engineer II at Dell</li>
+          <li><b>Strongest at:</b> Java, Spring Boot, .NET, Kafka</li>
+          <li><b>Exploring:</b> AI agents, MCP, A2A</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2 class="s">Things I’ve built</h2>
+    <div class="proj">
+      <article class="card big">
+        <h3>AI monitoring system, in production</h3>
+        <p>An LLM-based monitoring assistant built with LangChain and retrieval-augmented generation (RAG). It reads operational context and helps teams find and explain issues faster.</p>
+        <div class="tags"><span class="tag">LangChain</span><span class="tag">RAG</span><span class="tag">Python</span><span class="tag">MCP</span></div>
+      </article>
+      <article class="card">
+        <h3>17 apps moved to Kubernetes</h3>
+        <p>Migrated 17 PCF applications to a Kubernetes cluster while upgrading from .NET 8 to .NET 10, and made the team’s applications security compliant.</p>
+        <div class="tags"><span class="tag">Kubernetes</span><span class="tag">.NET 10</span><span class="tag">PCF</span></div>
+      </article>
+      <article class="card">
+        <h3>Vault-backed microservices</h3>
+        <p>Services fetch secrets dynamically from HashiCorp Vault, removing static configuration and tightening runtime security.</p>
+        <div class="tags"><span class="tag">Spring Boot</span><span class="tag">Vault</span></div>
+      </article>
+      <article class="card">
+        <h3>Oracle APEX automation</h3>
+        <p>Internal tools in PL/SQL and JavaScript that cut manual workflow effort by 70%.</p>
+        <div class="tags"><span class="tag">Oracle APEX</span><span class="tag">PL/SQL</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2 class="s">Experience</h2>
+    <div class="timeline">
+      <div class="job">
+        <h3>Software Engineer II, IT – Dell Technologies</h3>
+        <div class="when">Feb 2026 – present · Bengaluru</div>
+        <ul>
+          <li>Modernised platforms into Spring Boot, Kafka, Docker and Kubernetes microservices, improving scalability by <b>65%</b>.</li>
+          <li>Tuned high-throughput .NET APIs consuming Kafka streams, lifting ingestion efficiency by <b>45%</b>.</li>
+          <li>Added Redis caching and async processing, cutting API latency by up to <b>50%</b>.</li>
+          <li>Automated NAS file ingestion pipelines to speed up metadata processing.</li>
+          <li>Standardised CI/CD with Jenkins, GitLab, SonarQube, Docker and JUnit, keeping deployment health at <b>100%</b>.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3>Software Engineer I, IT – Dell Technologies</h3>
+        <div class="when">Aug 2023 – Feb 2026 · Bengaluru</div>
+        <ul>
+          <li>Built RESTful APIs in Java, Spring Boot and .NET using MVC and microservice patterns.</li>
+          <li>Introduced Kafka for event-driven flows and Redis for faster responses and higher throughput.</li>
+          <li>Delivered <b>100%</b> of business-critical features on time across Agile sprints.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack">
+    <h2 class="s">Toolbox</h2>
+    <div class="stack">
+      <div class="card"><h3>Languages</h3><p>Java, Python, C/C++, JavaScript, SQL, PL/SQL</p></div>
+      <div class="card"><h3>Frameworks</h3><p>Spring Boot, .NET Core, Angular, Flask, FastAPI</p></div>
+      <div class="card"><h3>Data and messaging</h3><p>Oracle, SQL Server, Redis, Apache Kafka</p></div>
+      <div class="card"><h3>Cloud and DevOps</h3><p>Docker, Kubernetes, PCF, GitLab CI/CD, Jenkins, SonarQube, Vault</p></div>
+      <div class="card"><h3>AI</h3><p>LangChain, RAG, AI agents, Model Context Protocol, Agent2Agent</p></div>
+      <div class="card"><h3>Tools</h3><p>Git, JIRA, ServiceNow, Oracle APEX</p></div>
+    </div>
+  </section>
+
+  <section id="learning">
+    <h2 class="s">Education and learning</h2>
+    <div class="two">
+      <div class="card">
+        <h3>B.Tech, Computer Science</h3>
+        <p>Kalinga Institute of Industrial Technology, 2019 – 2023. CGPA 9.32.</p>
+        <p>SSB recommended (Allahabad). Rajya Puraskar, Scouts and Guides.</p>
+      </div>
+      <div class="card">
+        <h3>Certifications</h3>
+        <ul class="list">
+          <li>Building AI Agents: Advanced Techniques for Developers</li>
+          <li>Model Context Protocol (MCP): Hands-On with Agentic AI</li>
+          <li>AI Agents with MCP and Agent2Agent (A2A)</li>
+          <li>CI/CD with GitLab</li>
+          <li>ASP.NET Core and Spring MVC</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="card">
+      <h2>Let’s talk 👋</h2>
+      <p>Hiring for a backend or AI role, or just want to swap notes on platform engineering and applied AI? I’d love to hear from you.</p>
+      <a class="btn" href="mailto:swapthemg@gmail.com">swapthemg@gmail.com</a>
+    </div>
+  </section>
+
+  <footer>© 2026 Ritik Dubey · Bengaluru, India</footer>
+</div>
+
+<script>
+const stages=[
+ ["Gateway","REST APIs in Java, Spring Boot and .NET with MVC and microservice structure. Entry point for every request."],
+ ["Secrets","Vault-integrated services retrieve secrets dynamically at runtime, so no static config lives in code or images."],
+ ["Events","Kafka-driven flows and .NET consumers tuned for throughput: 45% better ingestion efficiency and lower latency."],
+ ["Cache","Redis caching and asynchronous processing cut API latency by up to 50%."],
+ ["Storage","Oracle and SQL Server with query and database optimisation, plus APEX tools that removed 70% of manual effort."]
+];
+const nodes=[...document.querySelectorAll('.node')],out=document.getElementById('readout');
+function show(i){nodes.forEach((n,k)=>n.setAttribute('aria-pressed',k===i));out.innerHTML='<b>'+stages[i][0]+'.</b> '+stages[i][1]}
+nodes.forEach((n,i)=>n.addEventListener('click',()=>show(i)));
+show(0);
+let auto=0;const pk=document.querySelector('.packet');
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  pk.addEventListener('animationiteration',()=>{auto=(auto+1)%5;show(auto)});
+}
+document.getElementById('theme').addEventListener('click',()=>{
+  const r=document.documentElement,dark=matchMedia('(prefers-color-scheme: dark)').matches;
+  const cur=r.dataset.theme||(dark?'dark':'light');
+  r.dataset.theme=cur==='dark'?'light':'dark';
+});
+</script>
+</body>
+</html>
